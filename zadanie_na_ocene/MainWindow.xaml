@@ -20,14 +20,14 @@
                     </ListBoxItem>
                     <ListBoxItem>
                         <StackPanel Orientation="Horizontal" Background="#f67e7d" Width="200">
-                            <CheckBox VerticalAlignment="Center"/>
+                            <CheckBox VerticalAlignment="Center" Checked="brzoza" Unchecked="brzoza2"/>
                             <Image Height="30" Width="30" Source="/brzoza.jpg"/>
                             <TextBlock Text="Brzoza" VerticalAlignment="Center" Margin="10,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
                     <ListBoxItem>
                         <StackPanel Orientation="Horizontal" Background="#843b62" Width="200">
-                            <CheckBox VerticalAlignment="Center"/>
+                            <CheckBox VerticalAlignment="Center" Checked="Narcyz" Unchecked="Narcyz2"/>
                             <Image Height="30" Width="30" Source="/narcyz.jpg"/>
                             <TextBlock Text="Narcyz" VerticalAlignment="Center" Margin="10,0,0,0"/>
                         </StackPanel>
@@ -38,21 +38,21 @@
                 <ListBox Background="#EFBD90">
                     <ListBoxItem>
                         <StackPanel Orientation="Horizontal" Background="#FFA4B6" Width="200">
-                            <CheckBox VerticalAlignment="Center"/>
+                            <CheckBox VerticalAlignment="Center"  Checked="Bambus" Unchecked="Bambus2"/>
                             <Image Height="30" Width="30" Source="/bambus.jpg"/>
                             <TextBlock Text="Bambus" VerticalAlignment="Center" Margin="10,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
                     <ListBoxItem>
                         <StackPanel Orientation="Horizontal" Background="#F765A3" Width="200">
-                            <CheckBox VerticalAlignment="Center"/>
+                            <CheckBox VerticalAlignment="Center" Checked="Aloes" Unchecked="Aloes2"/>
                             <Image Height="30" Width="30" Source="/aloes.jpg"/>
                             <TextBlock Text="Aloes" VerticalAlignment="Center" Margin="10,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
                     <ListBoxItem>
                         <StackPanel Orientation="Horizontal" Background="#A155B9" Width="200">
-                            <CheckBox VerticalAlignment="Center"/>
+                            <CheckBox VerticalAlignment="Center" Checked="Irys" Unchecked="Irys2"/>
                             <Image Height="30" Width="30" Source="/irys.jpg" />
                             <TextBlock Text="Irys" VerticalAlignment="Center" Margin="10,0,0,0"/>
                         </StackPanel>
@@ -62,18 +62,24 @@
         </StackPanel>
 
         <Canvas HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Rectangle Width="100" Height="50" Stroke="#ffb965" Fill="#ffb997" Name="paproc_kwadrat" Canvas.Left="-300"></Rectangle>
-            <ScrollBar Name="scroll_paprotka" Height="0"/>
-            <Rectangle Width="100" Height="50" Stroke="#f67e4F" Fill="#f67e7d" Canvas.Left="-200" Name="brzoza_kwadrat"></Rectangle>
-            <ScrollBar Name="scroll_brzoza" Height="0"/>
-            <Rectangle Width="100" Height="50" Stroke="#843b30" Fill="#843b62" Canvas.Left="-100" Name="narcyz_kwadrat" ></Rectangle>
-            <ScrollBar Name="scroll_narcyz" Height="0"/>
-            <Rectangle Width="100" Height="50" Stroke="#FFA404" Fill="#FFA4B6" Canvas.Left="0" Name="bambus_kwadrat"></Rectangle>
-            <ScrollBar Name="scroll_bambus" Height="0"/>
-            <Rectangle Width="100" Height="50" Stroke="#F765C1" Fill="#F765A3" Canvas.Left="100" Name="aloes_kwadrat"></Rectangle>
-            <ScrollBar Name="scroll_aloes" Height="0"/>
-            <Rectangle Width="100" Height="50" Stroke="#A155F7" Fill="#A155B9" Canvas.Left="200" Name="irys_kwadrat"></Rectangle>
-            <ScrollBar Name="scroll_irys" Height="0"/>
+            <Rectangle Width="100" Height="50" Stroke="#ffb965" Fill="#ffb997" Name="paproc_kwadrat" Canvas.Left="-300" Visibility="Hidden"></Rectangle>
+            <ScrollBar Name="scroll_paprotka" Height="0" Minimum="25" Maximum="150"  Visibility="Hidden" Scroll="scroll_paprotka_Scroll"/>
+            <Slider Width="0" Name="slider_paprotka" Visibility="Hidden" ValueChanged="slider_paprotka_ValueChanged" Minimum="100" Maximum="200"/>
+            <Rectangle Width="100" Height="50" Stroke="#f67e4F" Fill="#f67e7d" Canvas.Left="-200" Name="brzoza_kwadrat" Visibility="Hidden"></Rectangle>
+            <ScrollBar Name="scroll_brzoza" Height="0" Minimum="25" Maximum="150" Visibility="Hidden" Scroll="scroll_brzoza_Scroll" />
+            <Slider Width="0" Name="slider_brzoza" Visibility="Hidden" ValueChanged="slider_brzoza_ValueChanged" Minimum="100" Maximum="200"/>
+            <Rectangle Width="100" Height="50" Stroke="#843b30" Fill="#843b62" Canvas.Left="-100" Name="narcyz_kwadrat" Visibility="Hidden"></Rectangle>
+            <ScrollBar Name="scroll_narcyz" Height="0" Minimum="25" Maximum="150"  Visibility="Hidden" Scroll="scroll_narcyz_Scroll"/>
+            <Slider Width="0" Name="slider_narcyz" Visibility="Hidden" Minimum="100" Maximum="200" ValueChanged="slider_narcyz_ValueChanged"/>
+            <Rectangle Width="100" Height="50" Stroke="#FFA404" Fill="#FFA4B6" Canvas.Left="0" Name="bambus_kwadrat" Visibility="Hidden"></Rectangle>
+            <ScrollBar Name="scroll_bambus" Height="0" Minimum="25" Maximum="150"   Visibility="Hidden" Scroll="scroll_bambus_Scroll"/>
+            <Slider Width="0" Name="slider_bambus" Visibility="Hidden" Minimum="100" Maximum="200" ValueChanged="slider_bambus_ValueChanged"/>
+            <Rectangle Width="100" Height="50" Stroke="#F765C1" Fill="#F765A3" Canvas.Left="100" Name="aloes_kwadrat" Visibility="Hidden"></Rectangle>
+            <ScrollBar Name="scroll_aloes" Height="0" Minimum="25" Maximum="150"   Visibility="Hidden" Scroll="scroll_aloes_Scroll"/>
+            <Slider Width="0" Name="slider_aloes" Visibility="Hidden" Minimum="100" Maximum="200" ValueChanged="slider_aloes_ValueChanged"/>
+            <Rectangle Width="100" Height="50" Stroke="#A155F7" Fill="#A155B9" Canvas.Left="200" Name="irys_kwadrat" Visibility="Hidden"></Rectangle>
+            <ScrollBar Name="scroll_irys" Height="0" Minimum="25" Maximum="150" Scroll="scroll_irys_Scroll"  Visibility="Hidden"/>
+            <Slider Width="0" Name="slider_irys" Visibility="Hidden" ValueChanged="slider_irys_ValueChanged" Minimum="100" Maximum="200"/>
         </Canvas>
 
     </Grid>
