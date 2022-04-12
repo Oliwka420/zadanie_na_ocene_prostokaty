@@ -1,0 +1,80 @@
+﻿<Window x:Class="zadanie_na_ocene.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zadanie_na_ocene"
+        mc:Ignorable="d"
+        Title="zadanie na ocene Oliwia Ankiewicz" Height="450" Width="800"
+        Background="#EFBD90">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Height="100" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">
+            <StackPanel Orientation="Vertical" Margin="0,0,50,0">
+                <ListBox Background="#EFBD90">
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal" Background="#ffb997" Width="200">
+                            <CheckBox VerticalAlignment="Center" Checked="paprotka" Unchecked="paprotka2"/>
+                            <Image Height="30" Width="30" Source="/paproc.jpg"/>
+                            <TextBlock Text="paproć" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal" Background="#f67e7d" Width="200">
+                            <CheckBox VerticalAlignment="Center"/>
+                            <Image Height="30" Width="30" Source="/brzoza.jpg"/>
+                            <TextBlock Text="Brzoza" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal" Background="#843b62" Width="200">
+                            <CheckBox VerticalAlignment="Center"/>
+                            <Image Height="30" Width="30" Source="/narcyz.jpg"/>
+                            <TextBlock Text="Narcyz" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="10,0,0,0">
+                <ListBox Background="#EFBD90">
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal" Background="#FFA4B6" Width="200">
+                            <CheckBox VerticalAlignment="Center"/>
+                            <Image Height="30" Width="30" Source="/bambus.jpg"/>
+                            <TextBlock Text="Bambus" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal" Background="#F765A3" Width="200">
+                            <CheckBox VerticalAlignment="Center"/>
+                            <Image Height="30" Width="30" Source="/aloes.jpg"/>
+                            <TextBlock Text="Aloes" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal" Background="#A155B9" Width="200">
+                            <CheckBox VerticalAlignment="Center"/>
+                            <Image Height="30" Width="30" Source="/irys.jpg" />
+                            <TextBlock Text="Irys" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </StackPanel>
+        </StackPanel>
+
+        <Canvas HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Rectangle Width="100" Height="50" Stroke="#ffb965" Fill="#ffb997" Name="paproc_kwadrat" Canvas.Left="-300"></Rectangle>
+            <ScrollBar Name="scroll_paprotka" Height="0"/>
+            <Rectangle Width="100" Height="50" Stroke="#f67e4F" Fill="#f67e7d" Canvas.Left="-200" Name="brzoza_kwadrat"></Rectangle>
+            <ScrollBar Name="scroll_brzoza" Height="0"/>
+            <Rectangle Width="100" Height="50" Stroke="#843b30" Fill="#843b62" Canvas.Left="-100" Name="narcyz_kwadrat" ></Rectangle>
+            <ScrollBar Name="scroll_narcyz" Height="0"/>
+            <Rectangle Width="100" Height="50" Stroke="#FFA404" Fill="#FFA4B6" Canvas.Left="0" Name="bambus_kwadrat"></Rectangle>
+            <ScrollBar Name="scroll_bambus" Height="0"/>
+            <Rectangle Width="100" Height="50" Stroke="#F765C1" Fill="#F765A3" Canvas.Left="100" Name="aloes_kwadrat"></Rectangle>
+            <ScrollBar Name="scroll_aloes" Height="0"/>
+            <Rectangle Width="100" Height="50" Stroke="#A155F7" Fill="#A155B9" Canvas.Left="200" Name="irys_kwadrat"></Rectangle>
+            <ScrollBar Name="scroll_irys" Height="0"/>
+        </Canvas>
+
+    </Grid>
+</Window>
